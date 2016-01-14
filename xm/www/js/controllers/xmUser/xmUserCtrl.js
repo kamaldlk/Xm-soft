@@ -7,6 +7,8 @@ angular.module("xm.controllers")
                 api.User.signIn(user, function (error, user) {
                     if (!error) {
                         user.getAllTransction(function (transactions) {
+                            user.getAllBeneficiary();
+                            user.getAllUsers();
                             $state.go('xmHome');
                         });
                     } else {

@@ -4,16 +4,23 @@ angular.module("xm.providers").provider("api", function apiProvider() {
     this.$get = ['$http', 'settings', 'CONSTANTS',
         function ($http, settings, CONSTANTS) {
             settings.load(function () {});
-            var apiClass = {}; {
+            var apiClass = {};
+
+
+            {
+                /*USER Class starts*/
                 apiClass.User = function () {
+                    var that = this;
                     this.id = "";
                     this.name = "";
                     this.username = "";
                     this.email = "";
                     this.dob = "";
+                    this.place = "";
                     this.transactions = [];
+                    this.beneficiaries = [];
+                    this.allUsers = [];
                     this.getAllTransction = function (callback) {
-                        var that = this;
                         $http.get('json/transactions.json').success(function (data) {
                             console.log('received transaction data is ', data);
                             that.transactions = data;
@@ -21,8 +28,25 @@ angular.module("xm.providers").provider("api", function apiProvider() {
                         }).error(function (error) {
                             (callback || angular.noop)(error, null);
                         });
-                    }
-                }
+                    };
+                    this.getAllBeneficiary = function () {
+                        $http.get('json/beneficiary.json').success(function (data) {
+                            console.log('all beneificiary data ', data);
+                            that.beneficiaries = data;
+                        }).error(function (error) {
+                            console.log('error in getting beneficiary ', error);
+                        });
+                    };
+                    this.getAllUsers = function () {
+                        $http.get('json/usersList.json').success(function (data) {
+                            _.each(data, function (user) {
+                                that.allUsers.push(angular.extend(new apiClass.User(), user));
+                            });
+                        }).error(function (error) {
+                            console.log('error in getting userList ', error);
+                        })
+                    };
+                };
 
                 apiClass.User.signIn = function (user, callback) {
                     $http.get('json/users.json').success(function (data) {

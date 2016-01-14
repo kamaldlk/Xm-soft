@@ -2,9 +2,7 @@
 angular.module("xm").config(['$stateProvider', '$urlRouterProvider', 'apiProvider', '$httpProvider',
 function ($stateProvider, $urlRouterProvider,  apiProvider, $httpProvider) {
 
-      //  var server = "http://www.hexodetech.com:8080/";
-
-      
+           
         $urlRouterProvider.otherwise('/xmSignIn');
 
         $stateProvider
@@ -15,7 +13,7 @@ function ($stateProvider, $urlRouterProvider,  apiProvider, $httpProvider) {
             })
             .state('xmHome', {
                 url: '/xmHome',
-                templateUrl: 'templates/xmHome/xmHome.html',
+                templateUrl: 'templates/xmHome/xmhome.html',
                 controller: 'xmHomeCtrl'
             })
             .state('xmbeneficiaryList', {
@@ -39,10 +37,6 @@ function ($stateProvider, $urlRouterProvider,  apiProvider, $httpProvider) {
                 controller: 'xmUsersListCtrl'
             })
             
-        // apiProvider.setApiUrl(server);
-        // apiProvider.setApiHeaders({});
-
-
-
+       
     }
 ]);

@@ -5,7 +5,7 @@
         "userName": "xmsoft",
         "password": "pass",
         "dob": "10/10/2010",
-        "email": "test@test.com",
+        "email": "xmsoft@hexode.com",
         "place":"Chennai"
     },
      {
@@ -14,7 +14,7 @@
         "userName": "Hexode",
         "password": "pass",
         "dob": "10/10/2010",
-        "email": "test@test.com",
+        "email": "info@hexode.com",
         "place":"Chennai"
     },
      {
@@ -23,7 +23,7 @@
         "userName": "Praba",
         "password": "pass",
         "dob": "10/10/2010",
-        "email": "test@test.com",
+        "email": "praba@hexode.com",
         "place":"Chennai"
     },
      {
@@ -32,8 +32,8 @@
         "userName": "saravanan",
         "password": "pass",
         "dob": "10/10/2010",
-        "email": "test@test.com",
+        "email": "saravanan@hexode.com",
         "place":"Chennai"
-    },
+    }
 
 ]

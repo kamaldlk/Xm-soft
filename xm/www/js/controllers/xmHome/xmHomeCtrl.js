@@ -3,26 +3,31 @@ angular.module("xm.controllers")
     .controller('xmHomeCtrl', ["$scope", "$state", "$rootScope", "api",
         function ($scope, $state, $rootScope, api) {
 
-           
-			$scope.beneficiary = function(){
 
-				$state.go("xmbeneficiaryList");
+            $scope.beneficiary = function () {
 
-			};
-			$scope.xmOthers = function(){
+                $state.go("xmbeneficiaryList");
 
-				$state.go("xmOthers");
+            };
+            $scope.xmOthers = function () {
 
-			};
-			$scope.xmTransactionList = function(){
+                $state.go("xmOthers");
 
-				$state.go("xmTransactionList");
+            };
+            $scope.xmTransactionList = function () {
 
-			}
-			$scope.xmUserList = function(){
+                $state.go("xmTransactionList");
 
-				$state.go("xmUserList");
+            }
+            $scope.xmUserList = function () {
 
-			}
+                $state.go("xmUserList");
+
+            }
+
+            $scope.logout = function () {
+                api.User.currentUser = null;
+                $state.go('xmSignIn');
+            }
 
 }]);

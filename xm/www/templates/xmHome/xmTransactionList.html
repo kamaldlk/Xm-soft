@@ -18,8 +18,11 @@
           <li class="featured" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="tran in api.User.currentUser.transactions">
           <div class="feat_small_icon"><img src="images/icons/white/favorites.png" alt="" title="" /></div>
           <div class="feat_small_details">
-          <h4><a href="index-2.html">{{tran.amount}}</a></h4>
-          <a href="index-2.html">{{tran.fromAcc}}</a>
+          <a href="#">Name : {{tran.name}}</a>
+          <h4><a href="#">Amount: {{tran.amount}}</a></h4>
+          <a href="#">From: {{tran.fromAcc}}</a>
+          <a href="#">To : {{tran.toAcc}}</a><br>
+          <a href="#">status : {{tran.status}}</a>
           </div>
           <span class="plus_icon"><a href="#"><img src="images/icons/black/plus.png" alt="" title="" /></a></span>
           </li> 

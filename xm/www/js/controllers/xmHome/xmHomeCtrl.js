@@ -4,6 +4,25 @@ angular.module("xm.controllers")
         function ($scope, $state, $rootScope, api) {
 
            
+			$scope.beneficiary = function(){
 
+				$state.go("xmbeneficiaryList");
+
+			};
+			$scope.xmOthers = function(){
+
+				$state.go("xmOthers");
+
+			};
+			$scope.xmTransactionList = function(){
+
+				$state.go("xmTransactionList");
+
+			}
+			$scope.xmUserList = function(){
+
+				$state.go("xmUserList");
+
+			}
 
 }]);

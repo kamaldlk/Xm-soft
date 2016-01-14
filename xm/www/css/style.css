@@ -600,10 +600,10 @@ position:relative;
 overflow:hidden;
 }
 span.plus_icon{
-position:absolute;
-bottom:-100%;
-right:-100%;
-height:24px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 24px;
 }
 ul.features_list_detailed li .feat_small_icon{
 width:14%;
@@ -611,7 +611,7 @@ float:left;
 padding:0;
 margin:1% 0 0 1%;
 position:relative;
-left:-100%;
+
 }
 ul.features_list_detailed li .feat_small_details{
 width:82%;
@@ -636,7 +636,7 @@ padding:0 0 5px 0;
 margin:0px;
 color:#2a3452;
 position:relative;
-right:-100%;
+
 }
 
 /*===============================================*/
@@ -2030,7 +2030,7 @@ top: 65px;
 max-width:40%;
 }
 .logo{
-        padding: 40px 0px 25px 0px;
+        padding: 25px 0px 20px 0px;
 }
 .logo h1{
 font-size:45px;
@@ -2103,3 +2103,9 @@ max-width:100%;
 }
 }
 
+.odd {
+  color: #2AD5DC !important;
+}
+.even {
+  color: #F6F6F6 !important;
+}

@@ -1,43 +1,4 @@
-/*==============================================
-[Main stylesheet style.css]
 
-Author:	SINDEVO.COM - Smart Internet Development
-Version:	1.0
-Created:	7 November 2015
-Last updated:	7 November 2015
-Template:	Codec - Mobile HTML Template
-================================================*/
-/*
-[Table of Contents]
-
-1. RESET
-2. GENERAL
-3. CUSTOM BUTTONS
-4. RIGHT SLIDE PANEL - USER ACCOUNT PAGE
-    4-1. USER ACCOUNT PAGE
-5. MAIN NAVIGATION ON HOME PAGE
-	5-1. MAIN NAVIGATION
-	5-2. HOME PAGE LOGO
-6. PAGES LAYOUT
-    6-1. PAGES HEADER
-	6-2. PAGES WITH TABLES
-7. FEATURED LISTS
-8. POPUPS
-9. SHOP
-    9-1. SHOP ITEM PAGE
-	9-2. SHOPPING CART - CECKOUT - LEFT SLIDE PANEL 
-	9-3. SUCCESS PAGE 
-10. PHOTO GALLERY
-11. BLOG LAYOUT
-    11-1. BLOG COMMENTS
-12. FORMS
-	12-1. CONTACT FORM
-	12-2. LOGIN / SIGNUP / FORGOT PASS FORM
-	12-3. COMMENT FORM
-13. TABS & ACCORDION
-14. MEDIA QUERIES
-    - @media screen and (max-width: 480px)
-*/
 /*===============================================*/
 /* 1. RESET		 						 */
 /*===============================================*/
@@ -175,14 +136,13 @@ color: #fff;
 /*===============================================*/	
 .panel {
 z-index: 1000;
-display: none;
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
 box-sizing: border-box;
 overflow: auto;
 -webkit-overflow-scrolling: touch;
 position: absolute;
-width: 83%;
+width: 100%;
 top: 0;
 height: 100%;
 -webkit-transform: translate3d(0, 0, 0);
@@ -289,7 +249,7 @@ letter-spacing:1px;
 /* 5-1. MAIN NAVIGATION */
 
 .main-nav{
-padding:50px 0 0 0px;
+padding:10px 0 0 0px;
 width:100%;
 }
 .main-nav ul{
@@ -317,7 +277,6 @@ display:block;
 text-align:center;
 padding:5px 0 0 0;
 position:relative;
-left:-100%;
 font-size:18px;
 }
 .main-nav ul li div.cartitems{
@@ -350,7 +309,7 @@ width:100%;
 text-align:center;
 color:#FFFFFF;
 position:relative;
-top:-50px;
+top:0px;
 padding:40px 0;
 }
 .logo h1{
@@ -641,10 +600,10 @@ position:relative;
 overflow:hidden;
 }
 span.plus_icon{
-position:absolute;
-bottom:-100%;
-right:-100%;
-height:24px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 24px;
 }
 ul.features_list_detailed li .feat_small_icon{
 width:14%;
@@ -652,7 +611,7 @@ float:left;
 padding:0;
 margin:1% 0 0 1%;
 position:relative;
-left:-100%;
+
 }
 ul.features_list_detailed li .feat_small_details{
 width:82%;
@@ -677,7 +636,7 @@ padding:0 0 5px 0;
 margin:0px;
 color:#2a3452;
 position:relative;
-right:-100%;
+
 }
 
 /*===============================================*/
@@ -1828,8 +1787,9 @@ margin:auto;
 }
 
 .loginform{
-width:90%;
-padding:20px 0 15px 5%;
+width:30%;
+/*padding:20px 0 15px 5%;*/
+margin: 20px auto;
 }
 .loginform label.error{
 padding:0 0 10px 0; 
@@ -1864,7 +1824,7 @@ color:#b7bec2;
 }
 .loginform input.form_submit{ 
 width:100%;
-padding:15px 0; 
+padding:10px 0; 
 margin:15px 0 0 0; 
 font-weight:normal;
 text-align:center;
@@ -2049,6 +2009,16 @@ padding:0px 15px;
 /*===============================================*/
 /* 14. MEDIA QUERIES */
 /*===============================================*/	
+@media screen and (max-width: 1100px) {
+	.loginform{
+	width: 40% !important;
+}
+}
+@media screen and (max-width: 840px) {
+	.loginform{
+	width: 60% !important;
+}
+}
 @media screen and (max-width: 640px) {
 .navbarpages{
 height:65px;
@@ -2060,7 +2030,7 @@ top: 65px;
 max-width:40%;
 }
 .logo{
-padding:0px;
+        padding: 25px 0px 20px 0px;
 }
 .logo h1{
 font-size:45px;
@@ -2100,6 +2070,10 @@ width:100%;
 }
 }
 @media screen and (max-width: 480px) {
+
+.loginform{
+	width: 90% !important;
+}
 .close_popup_button a{
 left:40%;
 }

@@ -1,0 +1,39 @@
+[
+    {
+        "id": "001",
+        "name": "xmsoft",
+        "userName": "xmsoft",
+        "password": "pass",
+        "dob": "10/10/2010",
+        "email": "test@test.com",
+        "place":"Chennai"
+    },
+     {
+        "id": "002",
+        "name": "Hexode",
+        "userName": "Hexode",
+        "password": "pass",
+        "dob": "10/10/2010",
+        "email": "test@test.com",
+        "place":"Chennai"
+    },
+     {
+        "id": "003",
+        "name": "Praba",
+        "userName": "Praba",
+        "password": "pass",
+        "dob": "10/10/2010",
+        "email": "test@test.com",
+        "place":"Chennai"
+    },
+     {
+        "id": "004",
+        "name": "saravanan",
+        "userName": "saravanan",
+        "password": "pass",
+        "dob": "10/10/2010",
+        "email": "test@test.com",
+        "place":"Chennai"
+    },
+
+]

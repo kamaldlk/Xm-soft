@@ -18,8 +18,27 @@ function ($stateProvider, $urlRouterProvider,  apiProvider, $httpProvider) {
                 templateUrl: 'templates/xmHome/xmHome.html',
                 controller: 'xmHomeCtrl'
             })
+            .state('xmbeneficiaryList', {
+                url: '/xmbeneficiaryList',
+                templateUrl: 'templates/xmHome/xmbeneficiaryList.html',
+                controller: 'xmBeneficiaryCtrl'
+            })
+            .state('xmOthers', {
+                url: '/xmOthers',
+                templateUrl: 'templates/xmHome/xmOthers.html',
+                controller: 'xmOtherCtrl'
+            })
+            .state('xmTransactionList', {
+                url: '/xmTransactionList',
+                templateUrl: 'templates/xmHome/xmTransactionList.html',
+                controller: 'xmTransactionListCtrl'
+            })
+            .state('xmUserList', {
+                url: '/xmUserList',
+                templateUrl: 'templates/xmHome/xmUsersList.html',
+                controller: 'xmUsersListCtrl'
+            })
             
-
         // apiProvider.setApiUrl(server);
         // apiProvider.setApiHeaders({});
 
